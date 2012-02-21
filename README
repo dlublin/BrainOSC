@@ -1,0 +1,10 @@
+Example project for converting data received from a ThinkGear MindWave (http://store.neurosky.com/products/mindwave-1) to OSC
+
+See http://developer.neurosky.com/ for details on the MindWave API.
+
+Uses http://code.google.com/p/vvopensource/ for sending OSC.
+
+
+Please report any issues to dlublin@gmail.com
+
+See http://github.com/dlublin/BrainOSC/ for more information.
