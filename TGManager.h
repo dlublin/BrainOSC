@@ -6,6 +6,16 @@
 //  Copyright 2012 Vidvox. All rights reserved.
 //
 
+
+/*
+
+	Example Cocoa wrapper for interfacing with a ThinkGear MindWave
+	
+	See http://developer.neurosky.com/ for more information on the TG API
+
+*/
+
+
 #import <Cocoa/Cocoa.h>
 #include <CoreFoundation/CoreFoundation.h> 
 #include <stdio.h>
@@ -17,17 +27,24 @@
 
 @protocol TGManagerDelegate
 
+/* This delegate method is called when the status changes */
 - (void) statusDidChange:(id)m;
+
+/* This delegate method is called when new values are read */
 - (void) valuesDidChange:(id)m;
 
 @end
 
 
+
+/* The possible manager status states */
 typedef enum	{
 	TGManagerStatusStopped = 0,
 	TGManagerStatusRunning = 1,
 	TGManagerStatusError = 2
 } TGManagerStatus;
+
+
 
 
 /* Baud rate for use with TG_Connect() and TG_SetBaudrate(). */
@@ -66,8 +83,7 @@ typedef enum	{
 
 	CFBundleRef thinkGearBundle;
 	int connectionID;
-	
-	NSRunLoop	*runLoop;
+
 	BOOL _running;
 	
 	TGManagerStatus status;
@@ -88,11 +104,15 @@ typedef enum	{
 
 }
 
-- (void) _prepareBundle;
+//	Methods for starting and stopping the manager
 - (void) start;
-- (void) _threadProc;
 - (void) stop;
 
+//	Internal methods
+- (void) _threadProc;
+- (void) _prepareBundle;
+
+//	Variables to read
 @property (readonly) TGManagerStatus status;
 
 @property (readonly) float signalQuality;

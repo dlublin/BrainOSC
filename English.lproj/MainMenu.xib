@@ -12,7 +12,6 @@
     </object>
     <object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
       <bool key="EncodedWithXMLCoder">YES</bool>
-      <integer value="29"/>
       <integer value="371"/>
     </object>
     <object class="NSArray" key="IBDocument.PluginDependencies">
@@ -1600,7 +1599,7 @@
                     <object class="NSTextField" id="309977625">
                       <reference key="NSNextResponder" ref="254722234"/>
                       <int key="NSvFlags">268</int>
-                      <string key="NSFrame">{{100, 14}, {123, 19}}</string>
+                      <string key="NSFrame">{{100, 14}, {198, 19}}</string>
                       <reference key="NSSuperview" ref="254722234"/>
                       <bool key="NSEnabled">YES</bool>
                       <object class="NSTextFieldCell" key="NSCell" id="850839571">
@@ -4223,7 +4222,7 @@
           <object class="NSAffineTransform">
             <bytes key="NSTransformStruct">AUOLAABDHwAAA</bytes>
           </object>
-          <string>{{286, 129}, {275, 183}}</string>
+          <string>{{392, 653}, {198, 183}}</string>
           <string>com.apple.InterfaceBuilder.CocoaPlugin</string>
           <integer value="1"/>
           <string>{{23, 794}, {245, 183}}</string>

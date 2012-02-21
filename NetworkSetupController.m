@@ -3,7 +3,7 @@
 //  VVOpenSource
 //
 //  Created by bagheera on 9/27/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Vidvox. All rights reserved.
 //
 
 #import "NetworkSetupController.h"

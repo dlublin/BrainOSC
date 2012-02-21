@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,8 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>14</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -315,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BrainOSCAppDelegate.m</string>
+								<string>NetworkSetupController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,17 +324,18 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BrainOSCAppDelegate.m</string>
+										<string>NetworkSetupController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4689FEF414F3E1B500260AEB</string>
+										<string>4689FF5F14F3ED2600260AEB</string>
 										<key>history</key>
 										<array>
 											<string>464D63BD14F34B3E00292443</string>
 											<string>4689FE2314F3781A00260AEB</string>
 											<string>4689FE4D14F3860E00260AEB</string>
-											<string>4689FECE14F3DDCE00260AEB</string>
+											<string>4689FF2514F3E6C900260AEB</string>
+											<string>4689FF2614F3E6C900260AEB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -355,8 +357,6 @@
 							<string>260pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -536,9 +536,9 @@
 		<string>4689FEEB14F3DE0800260AEB</string>
 		<string>4689FEEC14F3DE0800260AEB</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>464D638F14F3416800292443</string>
 		<string>/Users/davidlublin/Documents/Projects/BrainOSC/BrainOSC.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>109 674 788 504 0 0 1920 1178 </string>
@@ -557,26 +557,28 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>TGManager.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {980, 244}}</string>
+								<string>{{0, 0}, {1383, 391}}</string>
 								<key>RubberWindowFrame</key>
-								<string>452 577 980 526 0 0 1920 1178 </string>
+								<string>452 430 1383 673 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>244pt</string>
+							<string>391pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -593,9 +595,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 249}, {980, 236}}</string>
+								<string>{{0, 396}, {1383, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>452 577 980 526 0 0 1920 1178 </string>
+								<string>452 430 1383 673 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -604,7 +606,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>485pt</string>
+					<string>632pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -627,7 +629,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>452 577 980 526 0 0 1920 1178 </string>
+			<string>452 430 1383 673 0 0 1920 1178 </string>
 			<key>WindowToolGUID</key>
 			<string>464D638F14F3416800292443</string>
 			<key>WindowToolIsVisible</key>
@@ -920,7 +922,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

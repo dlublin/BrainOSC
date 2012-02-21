@@ -63,6 +63,10 @@
 	
 	NSString *address = nil;
 	OSCMessage		*msg = 	nil;
+
+	BOOL	contact = NO;
+	if ([tgManager signalQuality]!=200)
+		contact=YES;
 	
 	//	Send each of the variables out over OSC
 	//	signalQuality, attention, meditation, raw, delta, theta, alpha1, alpha2, beta1, beta2, gamma1, gamma2
@@ -95,13 +99,14 @@
 			0];
 			
 	if (msg)	{
-		BOOL	contact = NO;
-		if ([tgManager signalQuality]!=200)
-			contact=YES:
-		[msg addBool:contact];
+		[msg addBOOL:contact];
 		[bundle addElement:msg];
 		[msg release];
 	}	
+	
+	//	If no contact is made don't send any other data
+	if (contact==NO)
+		goto BAIL;
 
 	address = @"/BrainWave/Attention";
 	msg = [[OSCMessage alloc] _fastInit:
@@ -268,6 +273,7 @@
 		[msg release];
 	}
 	
+	BAIL:
 	pack = [OSCPacket createWithContent:bundle];
 	
 	int outportIndex = [dstPopUpButton indexOfSelectedItem];
