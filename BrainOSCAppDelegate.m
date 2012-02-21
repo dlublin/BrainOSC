@@ -148,7 +148,30 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager raw]/100.0];
+		float raw = 5*([tgManager raw]/32767.0)+0.5;
+		[msg addFloat:raw];
+		[bundle addElement:msg];
+		[msg release];
+	}
+	
+	//	Normalize the values for the individual frequency ranges
+	//	Also send their sum as the total amount of activity
+	float sum = [tgManager delta] + [tgManager theta] + [tgManager alpha1] + [tgManager alpha2] + [tgManager beta1] + [tgManager beta2] + [tgManager gamma1] + [tgManager gamma2];
+	
+	if (sum==0)
+		goto BAIL;
+		
+	address = @"/BrainWave/TotalActivity";
+	msg = 	[[OSCMessage alloc] _fastInit:
+			address:
+			NO:
+			OSCMessageTypeControl:
+			OSCQueryTypeUnknown:
+			0:
+			0];
+			
+	if (msg)	{
+		[msg addFloat:sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -163,7 +186,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager delta]];
+		[msg addFloat:[tgManager delta]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -178,7 +201,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager theta]];
+		[msg addFloat:[tgManager theta]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -193,7 +216,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager alpha1]];
+		[msg addFloat:[tgManager alpha1]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -208,7 +231,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager alpha2]];
+		[msg addFloat:[tgManager alpha2]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -223,7 +246,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager beta1]];
+		[msg addFloat:[tgManager beta1]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -238,7 +261,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager beta2]];
+		[msg addFloat:[tgManager beta2]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -253,7 +276,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager gamma1]];
+		[msg addFloat:[tgManager gamma1]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}
@@ -268,7 +291,7 @@
 			0];
 			
 	if (msg)	{
-		[msg addFloat:[tgManager gamma2]];
+		[msg addFloat:[tgManager gamma2]/sum];
 		[bundle addElement:msg];
 		[msg release];
 	}

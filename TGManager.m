@@ -128,10 +128,10 @@ void (*TG_FreeConnection)(int) = NULL;
 			attention = TG_GetValue(connectionID, TG_DATA_ATTENTION); 
 			meditation = TG_GetValue(connectionID, TG_DATA_MEDITATION);
 			
-			raw = TG_GetValue(connectionID, TG_DATA_RAW); 
+			raw = TG_GetValue(connectionID, TG_DATA_RAW);
+			
 			delta = TG_GetValue(connectionID, TG_DATA_DELTA); 
 			theta = TG_GetValue(connectionID, TG_DATA_THETA);
-			
 			alpha1 = TG_GetValue(connectionID, TG_DATA_ALPHA1); 
 			alpha2 = TG_GetValue(connectionID, TG_DATA_ALPHA2); 
 			beta1 = TG_GetValue(connectionID, TG_DATA_BETA1);
