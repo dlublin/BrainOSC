@@ -13,13 +13,15 @@ int (*TG_GetNewConnectionId)() = NULL;
 int (*TG_Connect)(int, const char *, int, int) = NULL; 
 int (*TG_ReadPackets)(int, int) = NULL;
 float (*TG_GetValue)(int, int) = NULL;
+BOOL (*TG_GetValueStatus)(int, int) = NULL;
 int (*TG_Disconnect)(int) = NULL;
 void (*TG_FreeConnection)(int) = NULL;
+int (*TG_EnableBlinkDetection)(int, int) = NULL;
 
 
 @implementation TGManager
 
-@synthesize status, signalQuality, attention, meditation, raw, delta, theta, alpha1, alpha2, beta1, beta2, gamma1, gamma2;
+@synthesize status, signalQuality, attention, meditation, raw, delta, theta, alpha1, alpha2, beta1, beta2, gamma1, gamma2, blink;
 
 - (void) awakeFromNib	{
 	[self start];
@@ -47,12 +49,17 @@ void (*TG_FreeConnection)(int) = NULL;
 	TG_Disconnect = (void*)CFBundleGetFunctionPointerForName(thinkGearBundle, CFSTR("TG_Disconnect"));
 	TG_FreeConnection = (void*)CFBundleGetFunctionPointerForName(thinkGearBundle, CFSTR("TG_FreeConnection"));
 	TG_GetValue = (void*)CFBundleGetFunctionPointerForName(thinkGearBundle, CFSTR("TG_GetValue"));
+	TG_GetValueStatus = (void*)CFBundleGetFunctionPointerForName(thinkGearBundle, CFSTR("TG_GetValueStatus"));
 	TG_ReadPackets = (void*)CFBundleGetFunctionPointerForName(thinkGearBundle, CFSTR("TG_ReadPackets"));
-	
+	TG_EnableBlinkDetection = (void*)CFBundleGetFunctionPointerForName(thinkGearBundle, CFSTR("TG_EnableBlinkDetection"));
 	if(!TG_Connect)	{
 		NSLog(@"Error: Failed to create TG_Connect");
 		goto BAIL;
 	}
+	if(!TG_GetValueStatus)	{
+		NSLog(@"Error: Failed to create TG_GetValueStatus");
+		goto BAIL;
+	}	
 	BAIL:
 	CFRelease(bundleURL); 
 }
@@ -106,6 +113,11 @@ void (*TG_FreeConnection)(int) = NULL;
 		goto BAIL;
 	}
 	
+	BOOL blinkActive = NO;
+	if (TG_EnableBlinkDetection(connectionID, 1)==0)	{
+		NSLog(@"\t\tenabled blink detection");
+		blinkActive = YES;
+	}
 	//	Start the run loop such that we break only when stopped
 	//		Within the loop check for new packets, update the variables as needed
 	int numPackets = 0;
@@ -138,6 +150,13 @@ void (*TG_FreeConnection)(int) = NULL;
 			beta2 = TG_GetValue(connectionID, TG_DATA_BETA2); 
 			gamma1 = TG_GetValue(connectionID, TG_DATA_GAMMA1); 
 			gamma2 = TG_GetValue(connectionID, TG_DATA_GAMMA2);
+			if ((blinkActive)&&(TG_GetValueStatus(connectionID, TG_DATA_BLINK_STRENGTH)))	{
+				blink = TG_GetValue(connectionID, TG_DATA_BLINK_STRENGTH);
+			}
+			else	{
+				blink = 0;
+			}
+			
 			
 			if (delegate)	{
 				[delegate valuesDidChange:self];

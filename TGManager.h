@@ -75,6 +75,7 @@ typedef enum	{
 #define TG_DATA_GAMMA1 11
 #define TG_DATA_GAMMA2 12
 
+#define TG_DATA_BLINK_STRENGTH 37
 
 
 @interface TGManager : NSObject {
@@ -101,6 +102,7 @@ typedef enum	{
 	float beta2;
 	float gamma1;
 	float gamma2;
+	float blink;
 
 }
 
@@ -128,5 +130,6 @@ typedef enum	{
 @property (readonly) float beta2;
 @property (readonly) float gamma1;
 @property (readonly) float gamma2;
+@property (readonly) float blink;
 
 @end

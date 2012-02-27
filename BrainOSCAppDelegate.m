@@ -104,7 +104,7 @@
 		[msg release];
 	}	
 	
-	//	If no contact is made don't send any other data
+	//	If no contact is made don't try to send any other data
 	if (contact==NO)
 		goto BAIL;
 
@@ -154,13 +154,28 @@
 		[msg release];
 	}
 	
+	address = @"/BrainWave/Blink";
+	msg = 	[[OSCMessage alloc] _fastInit:
+			address:
+			NO:
+			OSCMessageTypeControl:
+			OSCQueryTypeUnknown:
+			0:
+			0];
+			
+	if (msg)	{
+		[msg addFloat:[tgManager blink]/255.0];
+		[bundle addElement:msg];
+		[msg release];
+	}
+	
 	//	Normalize the values for the individual frequency ranges
 	//	Also send their sum as the total amount of activity
 	float sum = [tgManager delta] + [tgManager theta] + [tgManager alpha1] + [tgManager alpha2] + [tgManager beta1] + [tgManager beta2] + [tgManager gamma1] + [tgManager gamma2];
 	
 	if (sum==0)
 		goto BAIL;
-		
+	
 	address = @"/BrainWave/TotalActivity";
 	msg = 	[[OSCMessage alloc] _fastInit:
 			address:
