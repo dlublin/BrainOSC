@@ -7,7 +7,7 @@ https://github.com/downloads/dlublin/BrainOSC/BrainOSC.zip
 Developers:
 See http://developer.neurosky.com/ for details on the MindWave API.
 
-Uses http://code.google.com/p/vvopensource/ for sending OSC.
+Uses https://github.com/mrRay/vvopensource for sending OSC.
 
 
 Please report any issues to dlublin@gmail.com
