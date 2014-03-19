@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* BrainOSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* BrainOSCAppDelegate.m */; };
-		464D639514F341C400292443 /* ThinkGear.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 464D639414F341C400292443 /* ThinkGear.bundle */; };
 		464D63A514F341EC00292443 /* TGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 464D63A414F341EC00292443 /* TGManager.m */; };
-		464D63A714F34AE000292443 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464D63A614F34AE000292443 /* CoreFoundation.framework */; };
-		4689FE0C14F375F800260AEB /* VVBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4689FE0A14F375F800260AEB /* VVBasics.framework */; };
-		4689FE0D14F375F800260AEB /* VVOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4689FE0B14F375F800260AEB /* VVOSC.framework */; };
 		4689FE1014F3760C00260AEB /* NetworkSetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4689FE0F14F3760C00260AEB /* NetworkSetupController.m */; };
-		4689FE1314F3765800260AEB /* VVBasics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4689FE0A14F375F800260AEB /* VVBasics.framework */; };
-		4689FE1414F3765800260AEB /* VVOSC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4689FE0B14F375F800260AEB /* VVOSC.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		C8CA5FF818DA278800D4D9C1 /* VVOSC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C8D3A32A18DA27210080984F /* VVOSC.framework */; };
+		C8CA5FF918DA278B00D4D9C1 /* VVBasics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C8D3A32C18DA272E0080984F /* VVBasics.framework */; };
+		C8D3A31B18DA24AC0080984F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D3A31A18DA24AC0080984F /* CoreFoundation.framework */; };
+		C8D3A32118DA25F20080984F /* ThinkGear.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D3A31E18DA25E70080984F /* ThinkGear.bundle */; };
+		C8D3A32918DA26970080984F /* ThinkGear.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8D3A31E18DA25E70080984F /* ThinkGear.bundle */; };
+		C8D3A32B18DA27210080984F /* VVOSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D3A32A18DA27210080984F /* VVOSC.framework */; };
+		C8D3A32D18DA272E0080984F /* VVBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D3A32C18DA272E0080984F /* VVBasics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,9 +28,10 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 10;
 			files = (
-				464D639514F341C400292443 /* ThinkGear.bundle in CopyFiles */,
+				C8CA5FF818DA278800D4D9C1 /* VVOSC.framework in CopyFiles */,
+				C8CA5FF918DA278B00D4D9C1 /* VVBasics.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,8 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4689FE1314F3765800260AEB /* VVBasics.framework in CopyFiles */,
-				4689FE1414F3765800260AEB /* VVOSC.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,16 +57,16 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		464D639414F341C400292443 /* ThinkGear.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ThinkGear.bundle; sourceTree = "<group>"; };
 		464D63A314F341EC00292443 /* TGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGManager.h; sourceTree = "<group>"; };
 		464D63A414F341EC00292443 /* TGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGManager.m; sourceTree = "<group>"; };
-		464D63A614F34AE000292443 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		4689FE0A14F375F800260AEB /* VVBasics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVBasics.framework; path = ../../../Documents/vvopensource/trunk/build/Release/VVBasics.framework; sourceTree = SOURCE_ROOT; };
-		4689FE0B14F375F800260AEB /* VVOSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VVOSC.framework; path = ../../../Documents/vvopensource/trunk/build/Release/VVOSC.framework; sourceTree = SOURCE_ROOT; };
 		4689FE0E14F3760C00260AEB /* NetworkSetupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSetupController.h; sourceTree = "<group>"; };
 		4689FE0F14F3760C00260AEB /* NetworkSetupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkSetupController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BrainOSC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BrainOSC-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* BrainOSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainOSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D3A31A18DA24AC0080984F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		C8D3A31E18DA25E70080984F /* ThinkGear.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ThinkGear.bundle; path = "../../Downloads/MindSet Development Tools/ThinkGear Communications Driver/macosx/ThinkGear.bundle"; sourceTree = "<group>"; };
+		C8D3A32A18DA27210080984F /* VVOSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VVOSC.framework; sourceTree = "<group>"; };
+		C8D3A32C18DA272E0080984F /* VVBasics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VVBasics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D3A32B18DA27210080984F /* VVOSC.framework in Frameworks */,
+				C8D3A32118DA25F20080984F /* ThinkGear.bundle in Frameworks */,
+				C8D3A31B18DA24AC0080984F /* CoreFoundation.framework in Frameworks */,
+				C8D3A32D18DA272E0080984F /* VVBasics.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				464D63A714F34AE000292443 /* CoreFoundation.framework in Frameworks */,
-				4689FE0C14F375F800260AEB /* VVBasics.framework in Frameworks */,
-				4689FE0D14F375F800260AEB /* VVOSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,10 +101,10 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4689FE0A14F375F800260AEB /* VVBasics.framework */,
-				4689FE0B14F375F800260AEB /* VVOSC.framework */,
+				C8D3A31A18DA24AC0080984F /* CoreFoundation.framework */,
+				C8D3A32C18DA272E0080984F /* VVBasics.framework */,
+				C8D3A32A18DA27210080984F /* VVOSC.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				464D63A614F34AE000292443 /* CoreFoundation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -150,7 +151,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				464D639414F341C400292443 /* ThinkGear.bundle */,
+				C8D3A31E18DA25E70080984F /* ThinkGear.bundle */,
 				8D1107310486CEB800E47090 /* BrainOSC-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -195,6 +196,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BrainOSC" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -221,6 +224,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				C8D3A32918DA26970080984F /* ThinkGear.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +273,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Documents/vvopensource/trunk/build/Release\"",
+					"/Users/dantheman/src/vvopensource/build@rpath",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -280,6 +286,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @executable_path/../Frameworks";
 				PRODUCT_NAME = BrainOSC;
+				SDKROOT = macosx10.8;
 			};
 			name = Debug;
 		};
@@ -292,6 +299,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Documents/vvopensource/trunk/build/Release\"",
+					"/Users/dantheman/src/vvopensource/build@rpath",
+					"$(PROJECT_DIR)",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -300,6 +309,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @executable_path/../Frameworks";
 				PRODUCT_NAME = BrainOSC;
+				SDKROOT = macosx10.8;
 			};
 			name = Release;
 		};

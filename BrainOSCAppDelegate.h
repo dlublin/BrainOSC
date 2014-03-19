@@ -29,13 +29,14 @@
 
 @interface BrainOSCAppDelegate : NSObject <NSApplicationDelegate, TGManagerDelegate> {
     NSWindow *window;
-
+    int		nFrameCount;
 	IBOutlet TGManager *tgManager;
 	IBOutlet OSCManager	*oscManager;
 	
 	IBOutlet NSPopUpButton		*dstPopUpButton;
 	IBOutlet NSButton			*startStopButton;
 	IBOutlet NSTextField		*tgManagerStatusField;
+    
 
 }
 
