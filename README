@@ -10,6 +10,10 @@ See http://developer.neurosky.com/ for details on the MindWave API.
 Uses https://github.com/mrRay/vvopensource for sending OSC.
 
 
+Video of it in action:
+https://vimeo.com/37532313
+
+
 Please report any issues to dlublin@gmail.com
 
 See http://github.com/dlublin/BrainOSC/ for more information.
